@@ -1,0 +1,49 @@
+{
+  "id": "E078",
+  "slug": "eng-log-mean-temperature",
+  "title": "로그평균 온도차 계산기",
+  "title_en": "Log Mean Temperature Difference Calculator",
+  "category": "열",
+  "category_en": "Heat transfer",
+  "fields": [
+    {
+      "key": "a",
+      "label": "첫 단부 유체 간 온도차 ΔT₁",
+      "label_en": "First end temperature difference ΔT₁",
+      "dimension": "deltaT",
+      "example": 20,
+      "constraint": "positive",
+      "display_unit": "Kdiff",
+      "display_value": "20"
+    },
+    {
+      "key": "b",
+      "label": "둘째 단부 유체 간 온도차 ΔT₂",
+      "label_en": "Second end temperature difference ΔT₂",
+      "dimension": "deltaT",
+      "example": 10,
+      "constraint": "positive",
+      "display_unit": "Kdiff",
+      "display_value": "10"
+    }
+  ],
+  "result_label": "로그평균 온도차 ΔT_lm",
+  "result_label_en": "Log mean temperature difference ΔT_lm",
+  "result_dimension": "deltaT",
+  "formula": "ΔT_lm = (ΔT₁−ΔT₂)/ln(ΔT₁/ΔT₂)",
+  "purpose": "열교환기 양 끝의 양의 온도차로 LMTD 계산",
+  "purpose_en": "Calculate LMTD from two positive terminal temperature differences.",
+  "assumptions": "ΔT₁,ΔT₂>0. 온도 역전이 없는 열교환기 단부 차이를 입력한다. 두 차이가 같으면 극한값인 동일 온도차를 반환한다. 전열량·보정계수·열교환기 형상 해석은 제외한다.",
+  "assumptions_en": "Required: ΔT₁,ΔT₂>0 without a temperature cross. Equal differences return their common limiting value. Heat duty, correction factors and exchanger geometry are excluded.",
+  "sources": [
+    {
+      "label": "MIT OCW · Log mean temperature difference",
+      "url": "https://ocw.mit.edu/courses/16-050-thermal-energy-fall-2002/87d9f4544b7fd64a77201382500d057c_10_part3.pdf"
+    }
+  ],
+  "condition": "",
+  "condition_en": "",
+  "site": "https://nanalab.kr/eng-log-mean-temperature/",
+  "repository": "https://github.com/NaNaCompany/eng-log-mean-temperature",
+  "output_unit": "Kdiff"
+}
